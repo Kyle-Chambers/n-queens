@@ -143,18 +143,17 @@
       var storage = [];
       var arrayOfRows = this.rows();
 
-      for (var row = 0; row < arrayOfRows.length; row++){
-        for (var column = 0; column < arrayOfRows[row].length; column++){
-          console.log(arrayOfRows[row][column]);
-          if (arrayOfRows[row][column] === 1){
+      for (var row = 0; row < arrayOfRows.length; row++) {
+        for (var column = 0; column < arrayOfRows[row].length; column++) {
+          if (arrayOfRows[row][column] === 1) {
             storage.push([row, column]);
           }
         }
       }
 
-      for (var i = 0; i < storage.length; i++){
-        for (var j = i + 1; j < storage.length; j++){
-          if (storage[i][0] - storage[j][0] === storage[i][1] - storage[j][1]){
+      for (var i = 0; i < storage.length; i++) {
+        for (var j = i + 1; j < storage.length; j++) {
+          if (storage[i][0] - storage[j][0] === storage[i][1] - storage[j][1]) {
             return true;
           }
         }
@@ -180,7 +179,7 @@
 
       for (var row = 0; row < arrayOfRows.length; row++){
         for (var column = 0; column < arrayOfRows[row].length; column++){
-          console.log(arrayOfRows[row][column]);
+
           if (arrayOfRows[row][column] === 1){
             storage.push([row, column]);
           }
